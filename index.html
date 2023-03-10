@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script type="text/javascript" src="static/js.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <title>Chekhovska</title>
+    </head>
+    <body>
+        <main>
+            <div id="cont">
+                <div id = "range">
+                    <label for="storage">Storage: <p id = "storage_value">50GB</p></label><br>
+                    <input type="range" id="storage" name="transfer" step="1" min="0" max="1000" value="50">
+                </div>
+                <div id = "range">
+                    <label for="transfer">Transfer: <p id = "transfer_value">50GB</p></label><br>
+                    <input type="range" id="transfer" name="transfer" step="1" min="0" max="1000" value="50">
+                </div>
+            </div>
+            <div id="cont" class="cont_graph">
+                <div id="names">
+                    <div id="name"><p>backblaze</p></div>
+                    <div id="name"><p>bunny</p>
+                        <div><input type="radio" id="hdd" name="bunny" value="hdd" data-price="0.01">
+                        <label for="hdd">HDD</label>
+                        <input type="radio" id="ssd" name="bunny" value="ssd" data-price="0.02">
+                        <label for="ssd">SSD </label></div>
+                    </div>
+                    <div id="name"><p>scaleway</p>
+                        <div><input type="radio" id="multi" name="scaleway" value="multi" data-price="0.06">
+                        <label for="multi">Multi</label>
+                        <input type="radio" id="single" name="scaleway" value="single" data-price="0.03">
+                        <label for="single">Single</label></div>
+                    </div>
+                    <div id="name"><p>vultr</p></div>
+                </div>
+                <div id="graph">
+                    <div id="all_graph"><div class="graph" id="backblaze" data-min="7" data-storage="0.005" data-transfer="0.01"></div><p class="price" id="price_backblaze">7$</p></div>
+                    <div id="all_graph"><div class="graph" id="bunny" data-max="10" data-storage="0.01" data-transfer="0.01"></div><p class="price" id="price_bunny">1$</p></div>
+                    <div id="all_graph"><div class="graph" id="scaleway" data-limit="75" data-storage="0.06" data-transfer="0.02"></div><p class="price" id="price_scaleway">0$</p></div>
+                    <div id="all_graph"><div class="graph" id="vultr" data-min="5" data-storage="0.01" data-transfer="0.01"></div><p class="price" id="price_vultr">5$</p></div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
