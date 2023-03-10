@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    font-family: "Courier New";
+}
+
+/* Main */
+
+main {
+    width: auto;
+    overflow-x: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 520px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#cont {
+    width: 100%;
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#range {
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+}
+#range label {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+label p {
+    padding: 0;
+    margin: 0;
+}
+
+#names {
+    width: 30%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: space-around;
+    align-items: center;
+}
+
+#name {
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: stretch;
+}
+#name p, #name div {
+    width: 100%;
+    text-align: left;
+}
+
+#name div {
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#graph {
+    width: 70%;
+    border-left: 5px solid black;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: space-around;
+
+}
+#all_graph {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#graph p {
+    width: 20%;
+    height: 50px;
+    text-align: left;
+}
+.graph {
+    height: 50px;
+    max-width: 75%;
+    border: 2px solid black;
+    background-color: gray;
+}
+
+#backblaze {
+    width: 7%;
+}
+#bunny {
+    width: 1%;
+}
+#scaleway {
+    width: 0%;
+}
+#vultr {
+    width: 5%;
+}
+
+
+/* Media */
+
+@media screen and (max-width: 992px) {
+    main, #cont {
+        flex-flow: column-reverse nowrap;
+    }
+    #range, #names, #graph {
+        width: 100%;
+    }
+    .cont_graph {
+        display: flex;
+        /*align-content: space-between;*/
+        justify-items: end;
+    }
+    #names {
+        width: 100%;
+        flex-flow: row nowrap;
+        margin: 50px 0;
+        bottom: 0;
+        justify-content: center;
+    }
+
+    #name p, #name div {
+        justify-content: center;
+        align-self: baseline;
+        text-align: center;
+    }
+    #graph {
+        transform: rotate(-90deg);
+        transform-origin: center center;
+        align-self: center;
+        max-width: 350px;
+        height: 80%;
+    }
+    #all_graph {
+        height: 90px;
+    }
+}
